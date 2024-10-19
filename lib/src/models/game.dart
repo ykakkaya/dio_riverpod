@@ -10,8 +10,8 @@ class Game with _$Game {
       required String name,
       required String console,
       required String photo,
-      @JsonKey(name: "created_at") required DateTime createdAt,
-      @JsonKey(name: "released_year") required int releaseYear}) = _Game;
+      required DateTime createdAt,
+      required int release_year}) = _Game;
 
   factory Game.fromJson(Map<String, dynamic> json) => _$GameFromJson(json);
 }

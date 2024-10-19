@@ -20,8 +20,8 @@ class GameService extends BaseService {
             right(Game.fromJson(r['data'])));
   }
 
-  Future<Either<String, Game>> retrieve(String id,Game game) async {
-    final response = await get(path: "$basePath/$id",data:game.toJson());
+  Future<Either<String, Game>> retrieve(String id) async {
+    final response = await get(path: "$basePath/$id");
     return response.fold(
         (l) => left(l),
         (r) =>

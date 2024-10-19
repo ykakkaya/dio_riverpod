@@ -24,10 +24,8 @@ mixin _$Game {
   String get name => throw _privateConstructorUsedError;
   String get console => throw _privateConstructorUsedError;
   String get photo => throw _privateConstructorUsedError;
-  @JsonKey(name: "created_at")
   DateTime get createdAt => throw _privateConstructorUsedError;
-  @JsonKey(name: "released_year")
-  int get releaseYear => throw _privateConstructorUsedError;
+  int get release_year => throw _privateConstructorUsedError;
 
   /// Serializes this Game to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -48,8 +46,8 @@ abstract class $GameCopyWith<$Res> {
       String name,
       String console,
       String photo,
-      @JsonKey(name: "created_at") DateTime createdAt,
-      @JsonKey(name: "released_year") int releaseYear});
+      DateTime createdAt,
+      int release_year});
 }
 
 /// @nodoc
@@ -72,7 +70,7 @@ class _$GameCopyWithImpl<$Res, $Val extends Game>
     Object? console = null,
     Object? photo = null,
     Object? createdAt = null,
-    Object? releaseYear = null,
+    Object? release_year = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -95,9 +93,9 @@ class _$GameCopyWithImpl<$Res, $Val extends Game>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      releaseYear: null == releaseYear
-          ? _value.releaseYear
-          : releaseYear // ignore: cast_nullable_to_non_nullable
+      release_year: null == release_year
+          ? _value.release_year
+          : release_year // ignore: cast_nullable_to_non_nullable
               as int,
     ) as $Val);
   }
@@ -115,8 +113,8 @@ abstract class _$$GameImplCopyWith<$Res> implements $GameCopyWith<$Res> {
       String name,
       String console,
       String photo,
-      @JsonKey(name: "created_at") DateTime createdAt,
-      @JsonKey(name: "released_year") int releaseYear});
+      DateTime createdAt,
+      int release_year});
 }
 
 /// @nodoc
@@ -136,7 +134,7 @@ class __$$GameImplCopyWithImpl<$Res>
     Object? console = null,
     Object? photo = null,
     Object? createdAt = null,
-    Object? releaseYear = null,
+    Object? release_year = null,
   }) {
     return _then(_$GameImpl(
       id: null == id
@@ -159,9 +157,9 @@ class __$$GameImplCopyWithImpl<$Res>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      releaseYear: null == releaseYear
-          ? _value.releaseYear
-          : releaseYear // ignore: cast_nullable_to_non_nullable
+      release_year: null == release_year
+          ? _value.release_year
+          : release_year // ignore: cast_nullable_to_non_nullable
               as int,
     ));
   }
@@ -175,8 +173,8 @@ class _$GameImpl extends _Game {
       required this.name,
       required this.console,
       required this.photo,
-      @JsonKey(name: "created_at") required this.createdAt,
-      @JsonKey(name: "released_year") required this.releaseYear})
+      required this.createdAt,
+      required this.release_year})
       : super._();
 
   factory _$GameImpl.fromJson(Map<String, dynamic> json) =>
@@ -191,15 +189,13 @@ class _$GameImpl extends _Game {
   @override
   final String photo;
   @override
-  @JsonKey(name: "created_at")
   final DateTime createdAt;
   @override
-  @JsonKey(name: "released_year")
-  final int releaseYear;
+  final int release_year;
 
   @override
   String toString() {
-    return 'Game(id: $id, name: $name, console: $console, photo: $photo, createdAt: $createdAt, releaseYear: $releaseYear)';
+    return 'Game(id: $id, name: $name, console: $console, photo: $photo, createdAt: $createdAt, release_year: $release_year)';
   }
 
   @override
@@ -213,14 +209,14 @@ class _$GameImpl extends _Game {
             (identical(other.photo, photo) || other.photo == photo) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
-            (identical(other.releaseYear, releaseYear) ||
-                other.releaseYear == releaseYear));
+            (identical(other.release_year, release_year) ||
+                other.release_year == release_year));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, id, name, console, photo, createdAt, releaseYear);
+      runtimeType, id, name, console, photo, createdAt, release_year);
 
   /// Create a copy of Game
   /// with the given fields replaced by the non-null parameter values.
@@ -240,13 +236,12 @@ class _$GameImpl extends _Game {
 
 abstract class _Game extends Game {
   factory _Game(
-          {required final String id,
-          required final String name,
-          required final String console,
-          required final String photo,
-          @JsonKey(name: "created_at") required final DateTime createdAt,
-          @JsonKey(name: "released_year") required final int releaseYear}) =
-      _$GameImpl;
+      {required final String id,
+      required final String name,
+      required final String console,
+      required final String photo,
+      required final DateTime createdAt,
+      required final int release_year}) = _$GameImpl;
   _Game._() : super._();
 
   factory _Game.fromJson(Map<String, dynamic> json) = _$GameImpl.fromJson;
@@ -260,11 +255,9 @@ abstract class _Game extends Game {
   @override
   String get photo;
   @override
-  @JsonKey(name: "created_at")
   DateTime get createdAt;
   @override
-  @JsonKey(name: "released_year")
-  int get releaseYear;
+  int get release_year;
 
   /// Create a copy of Game
   /// with the given fields replaced by the non-null parameter values.

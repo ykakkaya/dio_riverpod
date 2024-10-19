@@ -11,8 +11,8 @@ _$GameImpl _$$GameImplFromJson(Map<String, dynamic> json) => _$GameImpl(
       name: json['name'] as String,
       console: json['console'] as String,
       photo: json['photo'] as String,
-      createdAt: DateTime.parse(json['created_at'] as String),
-      releaseYear: (json['released_year'] as num).toInt(),
+      createdAt: DateTime.parse(json['createdAt'] as String),
+      release_year: (json['release_year'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$GameImplToJson(_$GameImpl instance) =>
@@ -21,6 +21,6 @@ Map<String, dynamic> _$$GameImplToJson(_$GameImpl instance) =>
       'name': instance.name,
       'console': instance.console,
       'photo': instance.photo,
-      'created_at': instance.createdAt.toIso8601String(),
-      'released_year': instance.releaseYear,
+      'createdAt': instance.createdAt.toIso8601String(),
+      'release_year': instance.release_year,
     };
